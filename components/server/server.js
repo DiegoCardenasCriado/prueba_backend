@@ -38,7 +38,9 @@ class Server {
     }
 
     routes() {
-        this.app.use( this.routesPath.product, require('../product/routers/product.routes'));
+        this.app.use( this.routesPath.product, require('../product/routes/product.routes'));
+        this.app.use( this.routesPath.role, require('../role/routes/sole.routes'));
+        this.app.use( this.routesPath.user, require('../user/routes/user.routes'));
     }
 
     listen() {
